@@ -1,0 +1,78 @@
+{% extends 'musicbeats/basic.html'%}
+{% block title%}{{song.name}}{%endblock%}
+
+
+
+<style>
+  body,
+  html {
+    height: 100%;
+  }
+
+  .bg {
+    /* The image used */
+    background-color: blueviolet;
+
+    /* Full height */
+
+    /* Center and scale the image nicely */
+  }
+
+  
+</style>
+
+
+
+
+{% block body %}
+    
+
+<div class="d-flex flex-column min-vh-100  " style="background-color: aliceblue;">
+
+  <div class="container">
+    <div class="row " style="padding-top: 4%;">
+      <div class="col-6">
+        <embed>
+
+        <img src="/media/{{song.image}}" height="350px" style="padding: 4%;">
+
+      </div>
+      <embed>
+      <div class="col">
+        <div style="padding: 5%;">
+          <h2 class="">Title : {{song.name}}</h2>
+          <h3>Movie : {{song.movie}} </h3>
+          <h3>Singer : {{song.singer}} </h3>
+          <h3>Type : {{song.tags}} </h3>
+          <br>
+          <div class="row">
+            <div class="col-5">
+              <a href="" download> <button class="btn btn-outline-danger">Download Song</button></a>
+            </div>
+            <div class="col-6">
+              <form action="/musicbeats/watchlater" method="POST">{% csrf_token %}
+                <input type="hidden" name="video_id" value="{{song.song_id}}">
+                <button class="btn btn-outline-danger" type="submit">Add to Watch Later</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+
+
+
+
+      </div>
+    </div>
+    <div class="row" style="padding-top: 4%;">
+      <audio controls>
+        <source src="/media/{{song.song}}" type="audio/mp3">
+      </audio>
+    </div>
+  </div>
+
+
+
+
+
+  {%endblock%}

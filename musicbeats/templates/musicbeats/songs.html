@@ -1,0 +1,52 @@
+{% extends 'musicbeats/basic.html'%} {% block title%} All Songs{%endblock%}
+
+<style>
+  
+
+  .bg {
+    /* The image used */
+    background-color: blueviolet;
+
+    /* Full height */
+
+    /* Center and scale the image nicely */
+  }
+</style>
+
+{% block body %}
+
+<div
+  class="bg"
+  style="background: fixed; background-image: url('https://www.itl.cat/pngfile/big/256-2567126_hd-marshmello-backgrounds-with-high-resolution-pixel-marshmello.jpg');"
+>
+  {% for i in song %}
+  <div class="container">
+    <div class="row" style="padding-top: 2%; padding-bottom: 2%; ">
+      <div class="col-4">
+        <img
+          src="/media/{{i.image}}"
+          class="img-fluid rounded-start"
+          alt="..."
+          height="130px"
+        />
+      </div>
+      <div class="col-8" style="padding-top: 1%">
+        <h3 class="card-title ">Name : {{i.name}}</h3>
+        <h4 class="card-title ">Singer : {{i.singer}}</h4>
+        <h5 class="card-text " style="padding-bottom: 0.5%">
+          Type : {{i.tags}}
+        </h5>
+        <div class="row">
+          <div class="col-5">
+        <a href="/musicbeats/songs/{{i.song_id}}"
+          ><button class="btn btn-danger btn-lg btn-block">Play Now</button></a
+        >
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+
+  {%endfor%}
+</div>
+{%endblock%}

@@ -1,0 +1,1004 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <title>{% block title %} {% endblock %}</title>
+
+
+
+    <style>
+      .banner-image {
+        background-image: url('/media/images/headphones-in-pastel-pink-and-blue_2560x1440_xtrafondos.com.jpg');
+        background-size: cover;
+      }
+    </style>
+
+<style>
+
+.boody{
+  background-color: rgb(253, 214, 250);
+}
+
+.search-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgb(26, 255, 236);
+  height: 55px;
+  border-radius: 40px;
+  padding: 10px;
+}
+.search-box:hover > .search-txt{
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+  background: white;
+}
+.search-btn{
+  color: brown;
+  float: right;
+  width: 40px;
+  height: 38px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.search-txt{
+  border: none;
+  background: none;
+  float: left;
+  padding: 0;
+  color: aliceblue;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+</style>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Palette+Mosaic&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/1abfa2d149.js" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    {% load static %}
+
+    <nav class="navbar  navbar-expand-lg navbar-dark ">
+      <div class="container">
+        
+        <a class="navbar-brand" href="/" style="font-family: 'Kanit', sans-serif; font-size:x-large;">
+          <i class="fa-solid fa-music" ></i>  Music Lover</a>
+        
+      
+  
+        
+          <div class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="Type to search" >
+            <a class="search-btn" href="#" >
+              <img src="/media/images/search.png" />
+        
+            </a>  
+          </div>
+        
+  
+      
+          <div class="kk" style="font-family: 'Kanit', sans-serif; font-size:medium;" >
+       
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/"><i class="fa-solid fa-house-chimney"></i> Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/musicbeats/songs"> <i class="fa-solid fa-guitar"></i> All Song</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contact</a>
+              </li>
+            </ul>      
+          
+        </div>
+      </div>
+      </div>
+    </nav>
+  
+  
+    <div>
+      {%if user.is_authenticated %}
+      <p>Hi {{request.user}}</p>
+      {%endif%}
+      </div>
+   
+   
+
+    {% block body %}
+    {% endblock %}
+  
+  
+  
+  
+    
+
+
+
+
+
+   <script
+   src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+   crossorigin="anonymous"
+ ></script>
+
+
+
+ <script type="text/javascript">
+   var nav = document.querySelector('nav');
+
+   window.addEventListener('scroll', function () {
+     if (window.pageYOffset > 100) {
+       nav.classList.add('bg-dark', 'shadow');
+     } else {
+       nav.classList.remove('bg-dark', 'shadow');
+     }
+   });
+ </script>
+
+
+
+
+
+
+
+
+ <!-- Option 2: Separate Popper and Bootstrap JS -->
+ <!--
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+ -->
+</body>
+</html>
+
+
+
+
+
+
+
+<div class="container mt-3" >
+  <div class="card mb-3" >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="/media/{{i.image}}" class="img-fluid rounded-start" alt="..." height="100px">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h4 class="card-title" >Name : {{i.name}}</h4>
+            <h5 class="card-title">Singer : {{i.singer}}</h5>
+            <p class="card-text">Type : {{i.tags}}</p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {% extends 'musicbeats/basic.html'%}
+{% block title%} All Songs{%endblock%}
+
+
+{% block body %}
+        
+{% for i in song %}
+
+<div class="container mt-3" >
+    <div class="card mb-3" >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/media/{{i.image}}" class="img-fluid rounded-start" alt="..." height="100px">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h4 class="card-title" >Name : {{i.name}}</h4>
+              <h5 class="card-title">Singer : {{i.singer}}</h5>
+              <p class="card-text">Type : {{i.tags}}</p>
+              <br>
+              {% if user.is_authenticated %}
+              <form action="/musicbeats/history" method="post">{% csrf_token %}
+                <input type="hidden" name="music_id" value="{{i.song_id}}">
+              
+                <a  href="/musicbeats/songs/{{i.song_id}}"><button class="btn btn-outline-danger"> Play Now</button></a>
+         
+            </form>
+            {%else%}
+            <a  href="/musicbeats/songs/{{i.song_id}}"><button class="btn btn-outline-danger"> Play Now</button></a>
+            {%endif%}
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      {%endfor%}
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <title>Hello World</title>
+
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <style>
+      .banner-image {
+        background-image: url('/media/images/headphones-in-pastel-pink-and-blue_2560x1440_xtrafondos.com.jpg');
+        background-size: cover;
+      }
+    </style>
+
+<style>
+
+.boody{
+  background-color: rgb(253, 214, 250);
+}
+
+.search-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: papayawhip;
+  height: 55px;
+  border-radius: 40px;
+  padding: 10px;
+}
+.search-box:hover > .search-txt{
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+  background: white;
+}
+.search-btn{
+  color: brown;
+  float: right;
+  width: 40px;
+  height: 38px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+.search-txt{
+  border: none;
+  background: none;
+  float: left;
+  padding: 0;
+  color: aliceblue;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+</style>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&family=Palette+Mosaic&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/1abfa2d149.js" crossorigin="anonymous"></script>
+
+
+  </head>
+  <body>
+    {% load static %}
+   <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/musicbeats/songs">All Songs</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+
+  -->
+ 
+
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <div class="container">
+      
+      <a class="navbar-brand" href="/" style="font-family:'Kanit', sans-serif; font-size:x-large;"><i class="fa-solid fa-music" ></i>  Music Lover</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+
+      
+        <div class="search-box">
+          <input class="search-txt" type="text" name="" placeholder="Type to search" >
+          <a class="search-btn" href="#" >
+            <img src="/media/images/search.png" />
+      
+          </a>  
+        </div>
+      
+
+    
+      <div class="kk" style="font-family: 'Kanit', sans-serif; font-size:medium;" >
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="mx-auto"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/"><i class="fa-solid fa-house-chimney"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/musicbeats/songs"> <i class="fa-solid fa-guitar"></i> All Song</a>
+          </li>
+          
+          
+        
+          <li class="nav-item dropdown text-white active">
+            <a href="/" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa-solid fa-headphones"></i>  Singer</a>
+              <div class="dropdown-menu">
+                  <a href="/musicbeats/singer" class="dropdown-item">Arijit Singh</a>
+                  <a href="/musicbeats/neha" class="dropdown-item">Neha kakkar</a>
+                  <a href="/musicbeats/sonu" class="dropdown-item">Sonu Nigam</a>
+                  <a href="/musicbeats/dhillon" class="dropdown-item">A P Dhillon</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="/musicbeats/songs"class="dropdown-item">All Song</a>
+              </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Contact</a>
+          </li>
+        </ul>      
+      </div>
+    </div>
+    </div>
+    </div>
+  </nav>
+
+
+  
+
+
+
+
+   <!-- Banner Image  -->
+   <div
+   class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center"
+ >
+   <div class="content text-center">
+     <h1 class="text-white" style="font-family: 'Palette Mosaic', cursive; font-size: 50px;"> MUSIC LOVER</h1>
+   </div>
+ </div>
+
+
+
+    
+
+
+<!--
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="{% static 'musicbeats/img-6.jpg'%}"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>“Music is the shorthand of emotion.”</h5>
+            <p>Music is life itself.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'musicbeats/img-5.jpg'%}"
+            class="d-block w-100 "
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>“Music is the wine that fills the cup of silence.”</h5>
+            <p>Music is life itself.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="{% static 'musicbeats/img-7.jpg'%}"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>“Life is one grand, sweet song so start the music.”</h5>
+            <p>Music is life itself.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+-->
+
+
+    <!-- card -->
+    <!-- card -->
+
+
+
+   
+    
+  <div class="boody">
+  
+    <div class="container text-center" style="padding: 2%">
+      <h2 style="letter-spacing: 2px; font-family: 'Kanit', sans-serif; ">
+        <i class="fa-solid fa-face-grin-hearts"></i>
+       Trending Songs 
+      </h2>
+
+
+
+
+      <div class="container">
+        <div class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-sm"><img class="d-block w-100" src="//placehold.it/1200x600/444" alt="1 slide"></div>
+                        <div class="col-sm"><img class="d-block w-100" src="//placehold.it/1200x600/ccff00" alt="2 slide"></div>
+                        <div class="col-sm"><img class="d-block w-100" src="//placehold.it/1200x600" alt="3 slide"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-sm"><img class="d-block w-100" src="//placehold.it/1200x600/ccff00" alt="4 slide"></div>
+                        <div class="col-sm"><img class="d-block w-100" src="//placehold.it/1200x600/444" alt="5 slide"></div>
+                        <div class="col-sm"><img class="d-block w-100" src="//placehold.it/1200x600/ddd" alt="6 slide"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    {% for i in song %}
+      <div class="row" style="padding: 2%">
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="/media/{{i.image}}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5
+                class="card-title"
+                style="
+                  font-family: 'Hubballi', cursive;
+                  font-weight: bolder;
+                  font-size: x-large;
+                "
+              >
+              {{i.name}}
+              </h5>
+              <p
+                class="card-text"
+                style="font-family: 'Hubballi', cursive; font-weight: 400"
+              >
+              {{i.tags}}
+              </p>
+              <a
+                href="/musicbeats/songs/{{i.song_id}}"
+                class="btn btn-outline-danger"
+                style="font-family: 'Hubballi', cursive; font-weight: 600"
+                >Play Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+
+
+      <h2 style="letter-spacing: 2px; font-family: ans-serif">
+        Recently Upload Songs
+      </h2>
+      <div class="row" style="padding: 2%">
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{% static 'musicbeats/img-1.jfif'%}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Play Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{% static 'musicbeats/img-1.jfif'%}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Play Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{% static 'musicbeats/img-1.jfif'%}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Play Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="letter-spacing: 2px; font-family: ans-serif">Liked Songs</h2>
+      <div class="row" style="padding: 2%">
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{% static 'musicbeats/img-1.jfif'%}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Play Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{% static 'musicbeats/img-1.jfif'%}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Play Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="{% static 'musicbeats/img-1.jfif'%}"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Play Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+
+
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add('bg-dark', 'shadow');
+        } else {
+          nav.classList.remove('bg-dark', 'shadow');
+        }
+      });
+    </script>
+
+
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container text-center" style="padding: 2%">
+  <h2 style="letter-spacing: 2px; font-family: 'Kanit', sans-serif; ">
+    <i class="fa-solid fa-face-grin-hearts"></i>
+    Lofi Songs
+    <i class="fa-solid fa-face-grin-hearts"></i>
+  </h2>
+
+
+
+
+
+  <div class="container" style="padding-top: 10px">
+    <div class="row">
+      <div id="carousel2" class="carousel slide" data-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-none d-lg-block">
+              <div class="slide-box">
+                <div class="row ">
+                  {%for i in song %}
+                  {% if i.singer in 'Arijit Singh' %}
+                  {% if forloop.counter < 4 %} <div class="col-4">
+                    <img src="/media/{{i.image}}" alt="First slide" style="height: 150px; padding-left: 5%;">
+                    <h3 class="" style="padding-top: 5%;">{{i.name}}</h3>
+                    <h4 class="" style="padding-bottom: 3%;">{{i.tags }}</h4>
+                    <a href="/musicbeats/songs/{{i.song_id}}"><button class="btn btn-outline-danger">Play
+                        Now</button></a>
+                </div>
+                {%endif%}
+                {%endif%}
+                {%endfor%}
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-none d-lg-block">
+
+            <div class="slide-box">
+              <div class="row ">
+                {%for i in song %}
+                {% if forloop.counter > 3 and forloop.counter < 7 %} <div class="col-4">
+                  <img src="/media/{{i.image}}" alt="First slide" style="height: 150px; padding-left: 5%;">
+                  <h3 style="padding-top: 5%;">{{i.name}}</h3>
+                  <h4 style="padding-bottom: 3%;">{{i.tags }}</h4>
+                  <a href="/musicbeats/songs/{{i.song_id}}"><button class="btn btn-outline-danger">Play
+                      Now</button></a>
+              </div>
+              {%endif%}
+              {%endfor%}
+            </div>
+
+          </div>
+
+
+
+          <div class="d-block d-sm-none">
+            <img class="d-block w-100" src="https://picsum.photos/600/400/?image=1&random" alt="Second slide">
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <ol class="carousel-indicators fancy_list">
+      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel" data-slide-to="1"></li>
+    </ol>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <div class="container text-center" style="padding: 2%">
+    <h2 style="letter-spacing: 2px; font-family: 'Kanit', sans-serif; ">
+
+      <i class="fa-brands fa-napster"></i> HollyWood Songs <i class="fa-brands fa-napster"></i>
+    </h2>
+    <div class="container" style="padding-top: 10px">
+      <div class="row">
+        <div id="carousel3" class="carousel slide" data-ride="carousel">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-none d-lg-block">
+                <div class="slide-box">
+                  <div class="row ">
+                    {%for i in song %}
+                    {% if forloop.counter < 4 %} <div class="col-4">
+                      <img src="/media/{{i.image}}" alt="First slide" style="height: 150px; padding-left: 5%;">
+                      <h3 class="" style="padding-top: 5%;">{{i.name}}</h3>
+                      <h4 class="" style="padding-bottom: 3%;">{{i.tags }}</h4>
+                      <a href="/musicbeats/songs/{{i.song_id}}"><button class="btn btn-outline-danger">Play
+                          Now</button></a>
+                  </div>
+                  {%endif%}
+                  {%endfor%}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-none d-lg-block">
+
+              <div class="slide-box">
+                <div class="row ">
+                  {%for i in song %}
+                  {% if forloop.counter > 3 and forloop.counter < 7 %} <div class="col-4">
+                    <img src="/media/{{i.image}}" alt="First slide" style="height: 150px; padding-left: 5%;">
+                    <h3 style="padding-top: 5%;">{{i.name}}</h3>
+                    <h4 style="padding-bottom: 3%;">{{i.tags }}</h4>
+                    <a href="/musicbeats/songs/{{i.song_id}}">
+                      <button class="btn btn-outline-danger">Play Now</button></a>
+                </div>
+                {%endif%}
+                {%endfor%}
+              </div>
+            </div>
+            <div class="d-block d-sm-none">
+              <img class="d-block w-100" src="https://picsum.photos/600/400/?image=1&random" alt="Second slide">
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel3" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel3" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <ol class="carousel-indicators fancy_list">
+        <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel3" data-slide-to="1"></li>
+      </ol>
+
+   
+  </div>
+
+
+  <br>
+  <br>
+
+<br>
+<br>
+

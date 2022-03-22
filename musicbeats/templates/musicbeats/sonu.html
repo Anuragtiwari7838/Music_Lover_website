@@ -1,0 +1,62 @@
+
+
+
+{% extends 'musicbeats/basic.html'%}
+{% block title%} Sonu Nigam Songs{%endblock%}
+
+<style>
+body, html {
+  height: 100%;
+}
+
+
+.bg {
+  /* The image used */
+  background-color: blueviolet;
+
+  /* Full height */
+ 
+
+  /* Center and scale the image nicely */
+ 
+ 
+  
+}
+
+</style>
+
+{% block body %}
+
+{% if user.is_authenticated %}
+<div class="bg" style="background: fixed; background-image: url('https://i.pinimg.com/originals/70/48/f4/7048f40d61632737bd25184383a67008.jpg');    background-position: center;  background-repeat: no-repeat; background-size: cover;">
+        
+{% for i in song %}
+{% if i.singer in 'Sonu nigam'  %}
+<div class="container">
+
+
+<div class="row " style="padding: 2%;">
+    <div class="col-4">
+        <img src="/media/{{i.image}}" class="img-fluid rounded-start" alt="..." height="130px">
+    </div>
+    <div class="col-8" style="padding-top: 1%;">
+        <h3 class="card-title text-white " >Name : {{i.name}}</h3>
+              <h4 class="card-title text-white "> Singer : {{i.singer}}</h4>
+              <h5 class="card-text text-white " style="padding-bottom: 0.5%;">Type : {{i.tags}}</h5>    
+              <a  href="/musicbeats/songs/{{i.song_id}}"><button class="btn btn-outline-danger"> Play Now</button></a>
+    </div>
+</div>
+</div>
+
+    {%endif%}
+    {%endfor%}
+  </div>
+    {% else %}
+    <div class="bg" style="background: fixed; background-image: url('https://i.pinimg.com/originals/70/48/f4/7048f40d61632737bd25184383a67008.jpg'); height: 535px; background-position: center;  background-repeat: no-repeat; background-size: cover;">
+ <div class="container">
+<h2 class="text-danger text-center">Please Sign Up To Use This Feature</h2>
+ </div>
+    </div>
+    
+    {%endif%}
+{%endblock%}
